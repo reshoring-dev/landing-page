@@ -352,29 +352,20 @@ hr{
 
 /* Style for the collapsible content such as faq commonly known as: accordion */
 
+.content {
+    display: none;
+    padding: 1rem;
+    transition: all 0.3s ease-out;
+}
+
 .faq-accordion {
-    background-color: inherit;
-    color: var(--faq-h-text);
     cursor: pointer;
-    padding: 15px 18px;
-    width: 100%;
-    border: none;
-    text-align: left;
-    outline: none;
-    transition: height 0.4s;
+    padding: 1rem;
 }
 
-.faq .content {
-    padding: 0px 18px;
-    color: var(--faq-content-text);
-    height: max-content;
-    overflow: hidden;
-    background-color: transparent;
-    text-align: justify;
-    max-height: 0px;
-    transition: max-height 0.4s, padding 0.4s;
+.faq-accordion i {
+    transition: transform 0.3s ease;
 }
-
 
 @media not all and (min-width: 1024px) {
     header .collapsible-header {

@@ -1,5 +1,3 @@
-
-
 class Dropdown {
     constructor(selector, onChange) {
         this.dropdown = document.querySelector(selector)
@@ -139,3 +137,31 @@ class Prompt{
     }
 
 }
+
+class FAQ {
+    constructor() {
+        this.faqs = document.querySelectorAll('.faq');
+        this.init();
+    }
+
+    init() {
+        this.faqs.forEach(faq => {
+            const accordion = faq.querySelector('.faq-accordion');
+            const content = faq.querySelector('.content');
+            const icon = accordion.querySelector('i');
+
+            accordion.addEventListener('click', () => {
+                // Toggle content visibility
+                content.style.display = content.style.display === 'block' ? 'none' : 'block';
+                
+                // Rotate icon
+                icon.style.transform = content.style.display === 'block' ? 'rotate(45deg)' : 'rotate(0deg)';
+            });
+        });
+    }
+}
+
+// Initialize FAQ when document is loaded
+document.addEventListener('DOMContentLoaded', () => {
+    new FAQ();
+});
