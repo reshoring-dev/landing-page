@@ -68,7 +68,7 @@ responsive()
 window.addEventListener("resize", responsive)
 
 /** Dark and light theme */
-if (localStorage.getItem('color-mode') === 'dark' || (!('color-mode' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+if (localStorage.getItem('color-mode') === 'dark') {
     document.documentElement.classList.add('tw-dark')
     updateToggleModeBtn()
 } else {
